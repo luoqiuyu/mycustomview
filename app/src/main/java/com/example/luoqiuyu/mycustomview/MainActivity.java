@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.show_radar_view).setOnClickListener(this);
+        findViewById(R.id.show_search_view).setOnClickListener(this);
     }
 
     @Override
@@ -21,6 +22,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent = new Intent(MainActivity.this,RadarActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.show_search_view:
+                Intent intent2 = new Intent(MainActivity.this,SearchActivity.class);
+                startActivity(intent2);
+                break;
+
         }
     }
 }
